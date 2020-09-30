@@ -24,8 +24,8 @@ module.exports = class MauricioClient extends Client {
 
                const [cmd, ...args] = message.content.slice(prefix.length).trim().split(/ +/g);
 
-               if (cmd.toLowerCase() === 'salve') {
-                    message.channel.send("Minha foto eh linda nao eh msmo?!");
+               if(cmd.toLowerCase() === "whoami"){
+                    message.channel.send(`Eu sou o Mauricio! Que come seu cu desde o início kkkkkk KEKW !`);
                }
           })
      }
