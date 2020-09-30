@@ -27,6 +27,10 @@ module.exports = class MauricioClient extends Client {
                if(cmd.toLowerCase() === "whoami"){
                     message.channel.send(`Eu sou o Mauricio! Que come seu cu desde o início kkkkkk KEKW !`);
                }
+
+               if(cmd.toLowerCase() === "pepega"){
+                    message.channel.send("Pepega!", {files: ['./img/kelves.png']});
+               }
           })
      }
 
