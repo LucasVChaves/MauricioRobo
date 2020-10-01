@@ -8,8 +8,8 @@ pelo anúncio das penalidades sorteadas pelo Paulo Roleta.
 
 --------------------------------------------------------------------------------------
 
-Esse bot é baseado no bot desenvolvido pela equipe do MenuDocs
-This bot is based in the bot developed by the MenucDocs team
+Esse bot é baseado no bot desenvolvido pela equipe do MenuDocs  
+This bot is based in the bot developed by the MenucDocs team  
 
-[Youtube](https://www.youtube.com/channel/UCpGGFqJP9vYvzFudqnQ-6IA)
+[Youtube](https://www.youtube.com/channel/UCpGGFqJP9vYvzFudqnQ-6IA)  
 [Discord](https://discord.gg/MgVaazZ)
