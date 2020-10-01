@@ -1,51 +1,60 @@
-const { Client } = require('discord.js');
+const { Client, Collection } = require('discord.js');
+const Util = require('./Util.js');
 
 module.exports = class MauricioClient extends Client {
 
      constructor(options = {}) {
           super({
-               disableMentions: "everyone"
+               disableMentions: 'everyone'
           });
           this.validate(options);
+
+          this.commands = new Collection();
+
+          this.aliases = new Collection();
+
+          this.utils = new Util(this);
 
           this.once('ready', () => {
                console.log(`Logged in as ${this.user.username}`)
           });
 
           this.on('message', async (message) => {
-               const mentionRegex = RegExp(`^<@!${this.user.id}>$`);
-               const mentionRegexPrefix = RegExp(`^<@!${this.user.id}> `);
+			const mentionRegex = RegExp(`^<@!${this.user.id}>$`);
+			const mentionRegexPrefix = RegExp(`^<@!${this.user.id}> `);
 
-               if (!message.guild || message.author.bot) return;
+			if (!message.guild || message.author.bot) return;
 
-               if (message.content.match(mentionRegex)) message.channel.send(`My prefix for ${message.guild.name} is ${this.prefix}.`);
+			if (message.content.match(mentionRegex)) message.channel.send(`My prefix for ${message.guild.name} is \`${this.prefix}\`.`);
 
-               const prefix = message.content.match(mentionRegexPrefix) ? message.content.match(mentionRegexPrefix)[0] : this.prefix;
+			const prefix = message.content.match(mentionRegexPrefix) ?
+				message.content.match(mentionRegexPrefix)[0] : this.prefix;
 
-               const [cmd, ...args] = message.content.slice(prefix.length).trim().split(/ +/g);
+			if(!message.content.startsWith(prefix)) return;
 
-               if(cmd.toLowerCase() === "whoami"){
-                    message.channel.send(`Eu sou o Mauricio! Que come seu cu desde o início kkkkkk KEKW !`);
-               }
+			// eslint-disable-next-line no-unused-vars
+			const [cmd, ...args] = message.content.slice(prefix.length).trim().split(/ +/g);
 
-               if(cmd.toLowerCase() === "pepega"){
-                    message.channel.send("Pepega!", {files: ['./img/kelves.png']});
-               }
-          })
+			const command = this.commands.get(cmd.toLowerCase()) || this.commands.get(this.aliases.get(cmd.toLowerCase()));
+			if (command) {
+				command.run(message, args);
+			}
+		});
      }
 
      validate(options) {
-          if (typeof options !== 'object') throw new TypeError('Options shoud be a type of Object.');
+		if (typeof options !== 'object') throw new TypeError('Options should be a type of Object.');
 
-          if (!options.token) throw new Error("You must pass the API Token");
-          this.token = options.token;
+		if (!options.token) throw new Error('You must pass the token for the client.');
+		this.token = options.token;
 
-          if (!options.prefix) throw new Error("You must pass a prefix");
-          if (typeof options.prefix !== 'string') throw new TypeError('Prefix should be of type String');
-          this.prefix = options.prefix
-     }
+		if (!options.prefix) throw new Error('You must pass a prefix for the client.');
+		if (typeof options.prefix !== 'string') throw new TypeError('Prefix should be a type of String.');
+		this.prefix = options.prefix;
+	}
 
-     async login(token = this.token) {
-          super.login(token)
-     }
-}
+     async start(token = this.token) {
+		this.utils.loadCommands();
+		super.login(token);
+	}
+};
