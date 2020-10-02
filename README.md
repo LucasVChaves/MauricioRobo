@@ -2,7 +2,9 @@
 ## Bot oficial do AgiotaCraft
 
 -> Bot responsável por administrar o servidor da Overtime. Também é responsável
-pelo anúncio das penalidades sorteadas pelo Paulo Roleta.
+pelo anúncio das penalidades sorteadas pelo Paulo Roleta.  
+
+-> Vai conectar com o PauloRoleta no futuro.
 
 [Discord Overtime](https://discord.gg/4jMy2Gs)
 
