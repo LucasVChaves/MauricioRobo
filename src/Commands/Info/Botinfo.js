@@ -20,7 +20,7 @@ module.exports = class extends Command{
           const core = os.cpus()[0];
           const embed = new MessageEmbed()
                .setThumbnail(this.client.user.displayAvatarURL())
-               .setColor(message.guild.me.displayHexColor || "GREEN")
+               .setColor(message.guild.me.displayHexColor || "RED")
                .addField('Geral', [
                     `**❯ Client:** ${this.client.user.tag} (${this.client.user.id})`,
                     `**❯ Comandos:** ${this.client.commands.size}`,
