@@ -7,7 +7,8 @@ module.exports = class extends Command {
           super(...args, {
                aliases: ['h', 'ajuda'],
                description: 'Te ajuda explicando um comando citado.',
-               category: 'Utilidades'
+               category: 'Utilidades',
+               usage: '[comando]'
           });
      }
 

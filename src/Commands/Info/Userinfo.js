@@ -24,7 +24,8 @@ module.exports = class extends Command {
           super(...args, {
                aliases: ["uinfo", "memberinfo", "minfo"],
                description: "Mostra as informações do membro marcado na mensagem.",
-               category: "Info"
+               category: "Info",
+               usage: '[membro]'
           });
      }
 
