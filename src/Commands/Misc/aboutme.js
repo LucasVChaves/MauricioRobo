@@ -2,7 +2,11 @@ const Command = require('../../Structures/Command.js');
 
 module.exports = class extends Command {
      constructor(...args) {
-          super(...args, { name: "aboutme",aliases: ['sobre'], })
+          super(...args, { 
+               aliases: ['sobre'],
+               description: "Revela quem realmente é MauricioRobô",
+               category: "Misc"
+          });
      }
 
      async run(message, args) {

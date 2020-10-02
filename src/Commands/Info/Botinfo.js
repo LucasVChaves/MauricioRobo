@@ -33,7 +33,7 @@ module.exports = class extends Command{
                .addField('Versões', [
                     `**❯ Versão Bot:** ${process.version}`,
                     `**❯ Node.js:** v${version}`,
-                    `**❯ Discord.js:** ${djsversion}`,
+                    `**❯ Discord.js:** v${djsversion}`,
                     '\u200b'
                ])
                .addField('Sistema', [

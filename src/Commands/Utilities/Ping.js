@@ -3,7 +3,11 @@ const Command = require('../../Structures/Command.js');
 module.exports = class extends Command {
 
 	constructor(...args) {
-		super(...args, {aliases:['pong']});
+		super(...args, {
+               aliases:['pong'],
+               description: 'Mostra seu ping, e o da API do Bot',
+               category: 'Utilidades'
+          });
 	}
 
 	async run(message) {

@@ -13,7 +13,9 @@ module.exports = class MauricioClient extends Client {
 
           this.aliases = new Collection();
 
-          this.utils = new Util(this);
+		this.utils = new Util(this);
+		
+		this.owners = options.owners;
 
           this.once('ready', () => {
                console.log(`Logged in as ${this.user.username}`)

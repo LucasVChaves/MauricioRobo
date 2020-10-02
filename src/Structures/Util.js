@@ -34,6 +34,14 @@ module.exports = class Util {
 		return `${parseFloat((bytes / Math.pow(1024, 1)).toFixed(2))} ${sizes[1]}`;
 	}
 
+	removeDuplicates(arr){
+		return [...new Set(arr)];
+	}
+
+	capitalise(string){
+		return string.split(' ').map(str => str.slice(0, 1).toUpperCase() + str.slice(1)).join(' ');
+	}
+
 	async loadCommands() {
 		return glob(`${this.directory}commands/**/*.js`).then(commands => {
 			for (const commandFile of commands) {

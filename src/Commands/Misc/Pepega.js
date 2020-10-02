@@ -4,7 +4,9 @@ module.exports = class extends Command {
 
 	constructor(...args) {
 		super(...args, {
-			aliases: ['ppg']
+			aliases: ['ppg'],
+			description: 'Pepega huehuehue',
+			category: 'Misc'
 		});
 	}
 
