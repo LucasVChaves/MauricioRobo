@@ -4,21 +4,37 @@ const glob = promisify(require('glob'));
 const Command = require('./Command.js');
 
 module.exports = class Util {
-     constructor(client) {
-          this.client = client;
-     }
-
-     isClass(input) {
-		return typeof input === 'function' &&
-          typeof input.prototype === 'object' &&
-          input.toString().substring(0, 5) === 'class';
+	constructor(client) {
+		this.client = client;
 	}
 
-     get directory() {
-          return `${path.dirname(require.main.filename)}${path.sep}`;
-     }
+	isClass(input) {
+		return typeof input === 'function' &&
+			typeof input.prototype === 'object' &&
+			input.toString().substring(0, 5) === 'class';
+	}
 
-     async loadCommands() {
+	get directory() {
+		return `${path.dirname(require.main.filename)}${path.sep}`;
+	}
+
+	trimArray(arr, maxLen = 10) {
+		if (arr.length > maxLen) {
+			const len = arr.length - maxLen;
+			arr = arr.slice(0, maxLen);
+			arr.push(`${len} more...`);
+		}
+		return arr;
+	}
+
+	formatBytes(bytes) {
+		if (bytes === 0) return '0 Bytes';
+		const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
+		const i = Math.floor(Math.log(bytes) / Math.log(1024));
+		return `${parseFloat((bytes / Math.pow(1024, 1)).toFixed(2))} ${sizes[1]}`;
+	}
+
+	async loadCommands() {
 		return glob(`${this.directory}commands/**/*.js`).then(commands => {
 			for (const commandFile of commands) {
 				delete require.cache[commandFile];
@@ -35,15 +51,6 @@ module.exports = class Util {
 				}
 			}
 		});
-	}
-
-	trimArray(arr, maxLen = 10){
-		if(arr.length > maxLen){
-			const len = arr.length - maxLen;
-			arr = arr.slice(0, maxLen);
-			arr.push(`${len} more...`);
-		}
-		return arr;
 	}
 
 }
