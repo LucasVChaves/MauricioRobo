@@ -9,7 +9,7 @@ module.exports = class extends Command {
 		super(...args, {
 			aliases: ['ppg'],
 			description: 'Pepega huehuehue',
-			category: 'Misc'
+			category: 'Images'
 		});
 	}
 

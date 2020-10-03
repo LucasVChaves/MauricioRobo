@@ -5,8 +5,8 @@ module.exports = class extends Command {
 
      constructor(...args) {
           super(...args, {
-               aliases: ['h', 'ajuda'],
-               description: 'Te ajuda explicando um comando citado.',
+               aliases: ['ajuda'],
+               description: 'Te ajuda explicando um comando citado. Se você ta vendo isso já sabe porque funciona né idiota!',
                category: 'Utilidades',
                usage: '[comando]'
           });

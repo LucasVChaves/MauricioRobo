@@ -5,11 +5,10 @@ module.exports = class Command {
 		this.name = options.name || name;
 		this.aliases = options.aliases || [];
 		this.description = options.description || 'No description provided.';
-		this.category = options.category || 'Miscellaneous';
+		this.category = options.category || 'Misc';
 		this.usage = `${this.client.prefix}${this.name} ${options.usage || ''}`.trim();
 	}
 
-	// eslint-disable-next-line no-unused-vars
 	async run(message, args) {
 		throw new Error(`Command ${this.name} doesn't provide a run method!`);
 	}
