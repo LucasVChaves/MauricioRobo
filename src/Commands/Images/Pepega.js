@@ -1,8 +1,6 @@
 const Command = require('../../Structures/Command');
 const {MessageEmbed} = require('discord.js');
 
-let imgPath = './img/kelves.png'
-
 module.exports = class extends Command {
 
 	constructor(...args) {
