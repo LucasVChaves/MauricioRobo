@@ -20,7 +20,7 @@ module.exports = class extends Event {
                embed.splitFields(`**❯ Mensagem deletada:** ${message.content}`);
           }
 
-          const channel = message.guild.channels.cache.find(ch => ch.name === 'roger');
+          const channel = message.guild.channels.cache.find(ch => ch.name === 'roger' || ch.name === "🤖│bot-commands");
           if (channel) channel.send(embed);
      }
 }
