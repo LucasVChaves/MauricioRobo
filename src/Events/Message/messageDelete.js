@@ -13,7 +13,7 @@ module.exports = class extends Event {
                .setDescription([
                     `**❯ Id da mensagem:** ${message.id}`,
                     `**❯ Canal:** ${message.channel}`,
-                    `**❯ Author:** ${message.member.displayName}`,
+                    `**❯ Autor:** ${message.member.displayName}`,
                     `${attachments ? `**❯ Anexos:** ${attachments.join('\n')}` : ''}`
                ]);
           if (message.content.length) {
