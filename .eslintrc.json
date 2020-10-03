@@ -1,3 +1,4 @@
 {
-     "extends": "tesseract"
+     "extends": "tesseract",
+     "complexity": ["error", {"max": 30}]
 }

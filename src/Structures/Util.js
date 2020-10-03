@@ -9,14 +9,15 @@ module.exports = class Util {
 		this.client = client;
 	}
 
+	
+	get directory() {
+		return `${path.dirname(require.main.filename)}${path.sep}`;
+	}
+
 	isClass(input) {
 		return typeof input === 'function' &&
 			typeof input.prototype === 'object' &&
 			input.toString().substring(0, 5) === 'class';
-	}
-
-	get directory() {
-		return `${path.dirname(require.main.filename)}${path.sep}`;
 	}
 
 	trimArray(arr, maxLen = 10) {
@@ -41,6 +42,23 @@ module.exports = class Util {
 
 	capitalise(string) {
 		return string.split(' ').map(str => str.slice(0, 1).toUpperCase() + str.slice(1)).join(' ');
+	}
+
+	comparePerms(member, target){
+		return member.roles.highest.position < member.roles.highest.position; 
+	}
+
+	formatPerms(perm) {
+		return perm.toLowerCase().replace(/("|_)(\S)/g, (s) => s.toUpperCase()).replace(/_/g, ' ')
+			.replace(/Guild/g, 'Server').replace(/Use Vad/g, 'Use Voice Activity Detection');
+	}
+
+	formatArray(array, type = 'conjunction'){
+		return new Intl.ListFormat('en_GB', {style: 'Short', type: type}).format(array);
+	}
+
+	async checkOwner(target){
+		return this.client.owners.includes(target.id);
 	}
 
 	async loadCommands() {
