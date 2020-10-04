@@ -3,7 +3,15 @@ const { MessageEmbed } = require('discord.js');
 const fetch = require('node-fetch');
 
 const subreddits = [
-
+     "GirlsFinishingTheJob",
+     "PetiteGoneWild",
+     "holdthemoan",
+     "cumsluts",
+     "milf",
+     "tittydrop",
+     "nsfwcosplay",
+     "nsfwfunny",
+     "PornInFifteenSeconds"
 ];
 
 module.exports = class extends Command {
@@ -11,7 +19,7 @@ module.exports = class extends Command {
      constructor(...args){
           super(...args, {
                aliases: ['pics', 'porn'],
-               description: 'Manda uma foto NSFW aleatório.',
+               description: 'Manda uma foto ou gif NSFW aleatório.',
                category: "NSFW",
                nsfw: true         
           });

@@ -3,7 +3,10 @@ const { MessageEmbed } = require('discord.js');
 const fetch = require('node-fetch');
 
 const subreddits = [
-
+     "rule34",
+     "hentai",
+     "quick_hentai",
+     "waifusgonewild"
 ];
 
 module.exports = class extends Command {
