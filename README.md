@@ -1,6 +1,8 @@
 # MauricioRobo
 ## Bot oficial do AgiotaCraft
 
+[![Run on Repl.it](https://repl.it/badge/github/LucasVChaves/MauricioRobo)](https://repl.it/github/LucasVChaves/MauricioRobo)  
+
 -> Bot responsável por administrar o servidor da Overtime. Também é responsável
 pelo anúncio das penalidades sorteadas pelo Paulo Roleta.  
 
