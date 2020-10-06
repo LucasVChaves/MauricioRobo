@@ -56,6 +56,8 @@ module.exports = class extends Command {
                ])
 
           return message.channel.send(embed);
+
+          console.log("Userinfo command used.");
      }
 
 };

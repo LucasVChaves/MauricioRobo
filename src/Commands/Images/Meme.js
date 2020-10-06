@@ -32,5 +32,7 @@ module.exports = class extends Command {
 
           const selected = data[Math.floor(Math.random() * data.length)];
           return message.channel.send(new MessageEmbed().setImage(`https://imgur.com/${selected.hash}${selected.ext.replace(/\?.*/, '')}`));
+     
+          console.log("Meme command used.");
      }
 }

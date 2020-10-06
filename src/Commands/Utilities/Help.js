@@ -52,6 +52,8 @@ module.exports = class extends Command {
                          `\`${cmd.name}\``).join(' '));
                }
                return message.channel.send(embed);
-          }                  
+          }                      
+
+          console.log("Help command used.");
      }
 }

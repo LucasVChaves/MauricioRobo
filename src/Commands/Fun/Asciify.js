@@ -30,6 +30,7 @@ module.exports = class extends Command {
                     console.error(err);
                });
 
+               console.log("Asciify command used.");
      }
 
 }

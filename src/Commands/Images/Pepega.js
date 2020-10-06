@@ -13,5 +13,7 @@ module.exports = class extends Command {
 
 	async run(message) {
 		message.channel.send(new MessageEmbed().setImage('https://cdn.discordapp.com/attachments/321836042506207234/761783244869206016/Screenshot_668.png'));
+	
+		console.log("Pepega command used.");
 	}
 };

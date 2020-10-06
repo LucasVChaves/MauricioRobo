@@ -18,6 +18,8 @@ module.exports = class extends Command {
           const response = choices[Math.floor(Math.random() * choices.length)];
 
           msg.edit(`${response} -> Latência do Bot \`${latency}ms\`, Latência da API: \`${Math.round(this.client.ws.ping)}ms\``);
+
+          console.log("Ping command used.");
 	}
 
 };

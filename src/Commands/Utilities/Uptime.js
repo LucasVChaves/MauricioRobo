@@ -13,6 +13,7 @@ module.exports = class extends Command {
 
 	async run(message) {
 		message.channel.send(`Meu tempo on é \`${ms(this.client.uptime, {long:true})}\``);
+		console.log("Uptime command used.");
 	}
 
 };

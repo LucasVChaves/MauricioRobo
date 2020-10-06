@@ -14,6 +14,7 @@ module.exports = class extends Command{
 
      async run(message, args){
 
+          console.log("Lockdown command used.");
 
      }
 

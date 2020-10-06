@@ -83,5 +83,7 @@ module.exports = class extends Command {
                .setTimestamp();
           
                message.channel.send(embed);
+
+               console.log("Serverinfo command used.");
      }
 };

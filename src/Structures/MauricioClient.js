@@ -37,6 +37,6 @@ module.exports = class MauricioClient extends Client {
      async start(token = this.token) {
 		this.utils.loadCommands();
 		this.utils.loadEvents();
-		super.login(process.env.TOKEN);
+		super.login(token);
 	}
 };

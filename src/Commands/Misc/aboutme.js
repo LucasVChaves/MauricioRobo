@@ -10,6 +10,8 @@ module.exports = class extends Command {
      }
 
      async run(message, args) {
-          message.channel.send(`Eu sou o Mauricio! Que come seu cu desde o início kkkkkk KEKW !`);
+          message.channel.send(`Eu sou o Mauricio! Que come seu cu desde o início kkkkkk KEKW !`);    
+
+          console.log("About command used.");
      }
 }
