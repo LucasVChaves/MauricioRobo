@@ -60,6 +60,11 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@extreme_hero/deeptype@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@extreme_hero/deeptype/-/deeptype-1.0.1.tgz#c63d41c41c9bbd5a6f157c49d4fdfdde76ae713b"
+  integrity sha512-xTwcSgwiZ7tqlD3vKSfAylqR2HHUKfYeqtlCe14pnDYTs2TInJrGKVaEer3BtlHU0zMk//0x53x/Ftojo7P00w==
+
 "@jimp/bmp@^0.10.3":
   version "0.10.3"
   resolved "https://registry.yarnpkg.com/@jimp/bmp/-/bmp-0.10.3.tgz#79a23678e8389865c62e77b0dccc3e069dfc27f0"

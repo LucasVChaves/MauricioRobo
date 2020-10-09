@@ -57,7 +57,7 @@ module.exports = class Util {
 		return new Intl.ListFormat('en_GB', {style: 'Short', type: type}).format(array);
 	}
 
-	async checkOwner(target){
+	checkOwner(target){
 		return this.client.owners.includes(target.id);
 	}
 
