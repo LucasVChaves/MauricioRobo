@@ -32,14 +32,14 @@ module.exports = class extends Command{
                }
 
                const stop = process.hrtime(start);
-               const responce = [
+               const response = [
                     `**Output:** \`\`\`js\n${this.clean(inspect(evaled, {depth: 0}))}\n\`\`\``,
                     `**Tipo:** \`\`\`ts\n${new Type(evaled).is}\n\`\`\``,
                     `**Tempo Levado:** \`\`\`${(((stop[0] * 1e9) + stop[1])) / 1e6}ms \`\`\``
                ]
 
                const res = response.join('\n');
-               if(responce.length < 2000){
+               if(res.length < 2000){
                     await msg.channel.send(res);
                } else {
                     const output = new MessageAttachment(Buffer.from(res), 'output.txt');
@@ -57,6 +57,6 @@ module.exports = class extends Command{
                     .replace(/@/g, `@${String.fromCharCode(8203)}`)
                     .replace(new RegExp(this.client.token, 'gi'), '****')
           }
+          return text;
      }
-
 };
