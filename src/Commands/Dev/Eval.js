@@ -9,8 +9,8 @@ module.exports = class extends Command{
      constructor(...args){
           super(...args, {
                aliases: ['ev'],
-               description: "",
-               category: "Owner",
+               description: "Avalia um objeto do código fonte. *útil pro dev*",
+               category: "Developer",
                ownerOnly: false
           });  
      }
