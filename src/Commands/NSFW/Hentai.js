@@ -1,14 +1,6 @@
 const Command = require('../../Structures/Command');
-const { MessageEmbed } = require('discord.js');
-//const fetch = require('node-fetch');
-const redditFetch = require('reddit-fetch');
-
-const subreddits = [
-     "rule34",
-     "hentai",
-     "quick_hentai",
-     "waifusgonewild"
-];
+const superagent = require('superagent');
+const { MessageEmbed, Message } = require('discord.js');
 
 module.exports = class extends Command {
 
@@ -23,24 +15,9 @@ module.exports = class extends Command {
 
      async run(message) {
           
-          //const data = await fetch(`https://imgur.com/r/${subreddits[Math.floor(Math.random() * subreddits.length)]}/hot.json`)
-          //     .then(response => response.json())
-          //     .then(body => body.data);
+          img = superagent.get('https://nekobot.xyz/api/image').query({type: 'hentai_anal'});
 
-          //const selected = data[Math.floor(Math.random() * data.length)];
-          //return message.channel.send(new MessageEmbed().setImage(`https://imgur.com/${selected.hash}${selected.ext.replace(/\?.*/, '')}`));
+          return message.channel.send(new MessageEmbed());
 
-          const data = redditFetch({
-               subreddit: 'hentai',
-               sort: 'new',
-               allowNSFW: true,
-               allowModPost: true,
-               allowCrossPost: true,
-               allowVideo: false
-          });
-
-          message.channel.send(new MessageEmbed().setImage(data));
-
-          console.log("Hentai command used.");
      }
 }
