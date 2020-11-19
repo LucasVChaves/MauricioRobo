@@ -10,7 +10,7 @@ module.exports = class extends Command{
           super(...args, {
                aliases: ['ev'],
                description: "Avalia um objeto do código fonte. *útil pro dev*",
-               category: "Developer",
+               category: "Dev",
                ownerOnly: false
           });  
      }

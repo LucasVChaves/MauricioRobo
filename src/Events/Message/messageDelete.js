@@ -5,7 +5,7 @@ module.exports = class extends Event {
 
      async run(message) {
           if (!message.guild || message.author.bot) return;
-          const attachments = message.attachments.size ? message.attachments.map(attachment => attachments.proxyURL) : null;
+          const attachments = message.attachments.size ? message.attachments.map(attachment => attachment.proxyURL) : null;
           const embed = new MauricioEmbed()
                .setColor('RED')
                .setAuthor(message.author.tag, this.client.user.displayAvatarURL({ dynamic: true }))

@@ -6,7 +6,7 @@ module.exports = class extends Command{
           super(...args, {
                aliases: ['exec'],
                description: "Executa um comando no console. *útil pro dev*",
-               category: "Developer",
+               category: "Dev",
                usage: "<query>",
                args: true
           });

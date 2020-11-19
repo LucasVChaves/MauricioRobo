@@ -55,9 +55,9 @@ module.exports = class extends Command {
                     '\u200b'
                ])
 
-          return message.channel.send(embed);
-
           console.log("Userinfo command used.");
+
+          return message.channel.send(embed);
      }
 
 };

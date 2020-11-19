@@ -9,7 +9,7 @@ module.exports = class extends Event {
           if (!message.guild || message.author.bot || old.content === message.content) return;
 
           const embed = new MauricioEmbed()
-               .setColor('LIME')
+               .setColor('GREEN')
                .setAuthor(old.author.tag, this.client.user.displayAvatarURL({ dynamic: true }))
                .setTitle('Mensagem Atualizada')
                .setDescription([
@@ -22,7 +22,7 @@ module.exports = class extends Event {
                     .map(result => result.added ? `**${result.value}**` : result.removed ? `~~${result.value}~~` : result.value)
                     .join(' '));
 
-               const channel = message.guild.channels.cache.find(ch => ch.name === 'roger' || ch.name === "📚│log");
+               const channel = message.guild.channels.cache.find(ch => ch.name.toLowerCase() === "log");
                if (channel) channel.send(embed);
      }
 }

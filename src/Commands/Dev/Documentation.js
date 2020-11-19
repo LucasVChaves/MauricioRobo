@@ -6,7 +6,7 @@ module.exports = class extends Command {
           super(...args, {
                aliases: ['docs', 'djs'],
                description: "Procura algo na documentação do Discord.js. *útil pro dev*",
-               category: "Developer",
+               category: "Dev",
                usage: "<searchQuery>",
                botPerms: ['ADD_REACTIONS', 'MENAGE_MESSAGES'],
                args: true
