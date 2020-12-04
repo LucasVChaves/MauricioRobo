@@ -21,6 +21,8 @@ module.exports = class extends Command {
 
      async run(message) {
 
+          console.log("Asciify command used.");
+
           asciifyImg('https://cdn.discordapp.com/attachments/321836042506207234/761783244869206016/Screenshot_668.png', options)
                .then(function (asciified) {
                     console.log(asciified)
@@ -29,8 +31,6 @@ module.exports = class extends Command {
                .catch(function (err) {
                     console.error(err);
                });
-
-               console.log("Asciify command used.");
      }
 
 }

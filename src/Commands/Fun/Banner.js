@@ -12,8 +12,9 @@ module.exports = class extends Command {
      }
 
      async run(msg, ...banner) {
-          return msg.channel.send(await figlet(banner), { code: true });
-     
+
           console.log("Banner command used.");
+
+          return msg.channel.send(await figlet(banner), { code: true });
      }
 };
