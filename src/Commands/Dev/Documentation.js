@@ -39,7 +39,9 @@ module.exports = class extends Command {
                msg.reactions.removeAll();
           }
 
-          if(react && react.first()) msg.delete();
+          if(react && react.first()){ 
+               msg.delete();
+          }
 
           return message;
      }
