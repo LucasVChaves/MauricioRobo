@@ -6,7 +6,7 @@ module.exports = class extends Command {
 	constructor(...args) {
 		super(...args, {
                aliases:['aang'],
-               description: 'Manda seu avatar RAW',
+               description: 'Manda seu avatar, ou de um membro marcado.',
                category: 'Utilidades',
                Usage: '>avatar <@user>'
           });
