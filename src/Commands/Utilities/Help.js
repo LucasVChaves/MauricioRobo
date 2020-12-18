@@ -8,7 +8,7 @@ module.exports = class extends Command {
                aliases: ['ajuda'],
                description: 'Te ajuda explicando um comando citado. Se você ta vendo isso já sabe porque funciona né idiota!',
                category: 'Utilidades',
-               usage: '[comando]'
+               usage: '>help <command>'
           });
      }
 

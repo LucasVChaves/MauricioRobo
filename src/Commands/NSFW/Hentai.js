@@ -1,6 +1,17 @@
 const Command = require('../../Structures/Command');
-const superagent = require('superagent');
 const { MessageEmbed, Message } = require('discord.js');
+const fetch = require('node-fetch');
+
+const subreddits = [
+     "hentai",
+     "rule34",
+     "hentaibondage",
+     "HentaiParadise",
+     "Hentai4Everyone",
+     "Hollow_Knight_R34"
+]
+
+
 
 module.exports = class extends Command {
 
@@ -14,10 +25,14 @@ module.exports = class extends Command {
      }
 
      async run(message) {
-          
-          img = superagent.get('https://nekobot.xyz/api/image').query({type: 'hentai_anal'});
+          const data = await fetch(`https://imgur.com/r/${subreddits[Math.floor(Math.random() * subreddits.length)]}/hot.json`)
+               .then(response => response.json())
+               .then(body => body.data);
 
-          return message.channel.send(new MessageEmbed());
+          const selected = data[Math.floor(Math.random() * data.length)];
 
+          console.log("Hentai command used.");
+
+          return message.channel.send(new MessageEmbed().setImage(`https://imgur.com/${selected.hash}${selected.ext.replace(/\?.*/, '')}`));
      }
 }
