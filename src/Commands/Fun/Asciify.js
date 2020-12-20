@@ -1,19 +1,13 @@
 const Command = require('../../Structures/Command');
-const asciifyImg = require('asciify-image');
 
-
-var options = {
-     fit: 'box',
-     width: 25,
-     height: 25
-}
+const { MessageEmbed } = require('discord.js');
 
 module.exports = class extends Command {
 
      constructor(...args) {
           super(...args, {
                aliases: ['asciificar'],
-               description: 'Transforma uma imagem em uma asciiart.',
+               description: 'Transforma uma imagem em uma asciiart ("braille").',
                category: 'Fun',
                usage: '<imagem>'
           });
@@ -23,14 +17,10 @@ module.exports = class extends Command {
 
           console.log("Asciify command used.");
 
-          asciifyImg('https://cdn.discordapp.com/attachments/321836042506207234/761783244869206016/Screenshot_668.png', options)
-               .then(function (asciified) {
-                    console.log(asciified)
-                    message.channel.send(asciified, {code: true});
-               })
-               .catch(function (err) {
-                    console.error(err);
-               });
-     }
+          const image = message.attachments.first() || message.mentions.members.last().user.displayAvatarURL() || message.member.user.displayAvatarURL();
 
+          message.channel.send(image);
+
+          const embed = new MessageEmbed().setColor("PINK")
+     }     
 }
