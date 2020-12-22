@@ -6,8 +6,8 @@ module.exports = class extends Command {
 
     constructor(...args){
         super(...args, {
-            aliases: ['ganco', 'ganço'],
-            description: 'Manda uma foto ou gif de ganço.',
+            aliases: ['ganso'],
+            description: 'Manda uma foto ou gif de ganso.',
             category: "NSFW",
             nsfw: true         
         });
