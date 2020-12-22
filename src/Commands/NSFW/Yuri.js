@@ -17,7 +17,7 @@ module.exports = class extends Command {
         console.log("Yuri command used.");
 
         return message.channel.send(
-            await nsfw.yuri()
+            await nsfw.lesbian()
             .then(img => new MessageEmbed().setImage(img.url).setColor("RED").setTitle("🔥Toma ai seu putenheiro🔥"))
             );
     }
