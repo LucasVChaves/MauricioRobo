@@ -40,7 +40,8 @@ module.exports = class extends Command {
                embed.setDescription([               
                     `O prefíxo é: ${this.client.prefix}`,
                     `Parâmetros: \`<>\` é obrigatório, \`[]\` é opcional.`,
-                    `Esses comandos são disponíveis no ${message.guild.name}`
+                    `Esses comandos são disponíveis no ${message.guild.name}`,
+                    `*Nota: Alguns comandos Image ou NSFW podem não funcionar devido à API do reddit (de onde as imagens são tiradas), não posso fazer nada a respeito disso.*`
                ]);
                let categories;
                if(!this.client.owners.includes(message.author.id)){
