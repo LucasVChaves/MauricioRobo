@@ -13,6 +13,8 @@ module.exports = class extends Command {
      }
 
      async run(message, [command]) {
+          console.log("Help command used.");
+
           const embed = new MessageEmbed()
                .setColor('LIME')
                .setAuthor(`Menu de ajuda do ${message.guild.name}.`,message.guild.iconURL({ dynamic: true }))
@@ -53,7 +55,5 @@ module.exports = class extends Command {
                }
                return message.channel.send(embed);
           }                      
-
-          console.log("Help command used.");
      }
 }

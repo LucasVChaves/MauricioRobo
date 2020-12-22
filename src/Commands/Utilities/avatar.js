@@ -1,4 +1,4 @@
-const { DiscordAPIError, MessageEmbed } = require('discord.js');
+const {MessageEmbed } = require('discord.js');
 const Command = require('../../Structures/Command.js');
 
 module.exports = class extends Command {
@@ -23,5 +23,4 @@ module.exports = class extends Command {
 
           message.channel.send(embed);
 	}
-
 };

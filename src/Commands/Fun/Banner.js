@@ -7,7 +7,7 @@ module.exports = class extends Command {
           super(...args, {
                description: 'Transforma o texto enviado em um banner ascii',
                category: 'Fun',
-               usage: '<texto>'
+               usage: '>banner <texto>'
           });
      }
 
