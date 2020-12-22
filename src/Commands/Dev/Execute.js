@@ -7,7 +7,7 @@ module.exports = class extends Command{
                aliases: ['exec'],
                description: "Executa um comando no console. *útil pro dev*",
                category: "Dev",
-               usage: "<query>",
+               usage: "<seachQuery>",
                args: true
           });
      }

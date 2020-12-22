@@ -12,7 +12,7 @@ module.exports = class extends Command {
                aliases: ["ld"],
                description: "Coloca o servidor em lockdown, trancando todos os canais de voz e texto. (CUIDADO!!)",
                category: 'Utilidades',
-               usage: ">lockdown <ROLE_ID> TRUE || FALSE || NULL",
+               usage: "<ROLE_ID> TRUE || FALSE || NULL",
                args: true,
                ownerOnly: false
           });

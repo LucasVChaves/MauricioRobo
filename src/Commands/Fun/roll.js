@@ -7,7 +7,7 @@ module.exports = class extends Command {
             aliases: ["dado", "dice", "rolar"],
             description: "Roda um dado baseado no número que você escolher.",
             category: "Fun",
-            usage: ">roll <número>",
+            usage: "<número>",
             args: true
         });
     }

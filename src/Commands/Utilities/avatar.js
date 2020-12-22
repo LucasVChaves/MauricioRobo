@@ -8,7 +8,7 @@ module.exports = class extends Command {
                aliases:['aang'],
                description: 'Manda seu avatar, ou de um membro marcado.',
                category: 'Utilidades',
-               Usage: '>avatar <@user>'
+               Usage: '[@user]'
           });
 	}
 

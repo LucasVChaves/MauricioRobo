@@ -5,10 +5,10 @@ module.exports = class extends Command {
 
 	constructor(...args) {
 		super(...args, {
-               aliases:['up'],
-               description: 'Mostra há quanto tempo o Bot está online.',
+            aliases:['up'],
+            description: 'Mostra há quanto tempo o Bot está online.',
 			category: 'Utilidades',
-          });
+        });
 	}
 
 	async run(message) {
