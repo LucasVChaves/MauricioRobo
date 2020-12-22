@@ -18,7 +18,7 @@ module.exports = class extends Command {
 
         return message.channel.send(
             await nsfw.yuri()
-            .then(img => new MessageEmbed().setImage(img.url))
+            .then(img => new MessageEmbed().setImage(img.url).setColor("RED").setTitle("🔥Toma ai seu putenheiro🔥"))
             );
     }
 }

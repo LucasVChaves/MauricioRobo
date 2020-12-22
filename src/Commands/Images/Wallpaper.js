@@ -6,18 +6,18 @@ module.exports = class extends Command {
 
     constructor(...args){
         super(...args, {
-            aliases: ['ganso'],
-            description: 'Manda uma foto ou gif de ganso.',
-            category: "Images"        
+            aliases: ['background', 'wllpr'],
+            description: 'Manda um wallpaper delicia pro seu pc.',
+            category: "Images"
         });
     }
 
     async run(message) {
-        console.log("Goose command used.");
+        console.log("Wallpaper command used.");
 
         return message.channel.send(
-            await sfw.goose()
-            .then(img => new MessageEmbed().setImage(img.url))
+            await sfw.wallpaper()
+            .then(img => new MessageEmbed().setImage(img.url).setColor("RANDOM"))
             );
     }
 }
