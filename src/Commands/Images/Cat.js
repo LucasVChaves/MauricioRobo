@@ -1,13 +1,6 @@
 const Command = require('../../Structures/Command');
 const { MessageEmbed } = require('discord.js');
-const fetch = require('node-fetch');
-
-const subreddits = [
-     'cat',
-     'cats',
-     'catpics',
-     'kittens'
-];
+const {sfw} = new (require("nekos.life"))();
 
 module.exports = class extends Command {
 
@@ -20,14 +13,11 @@ module.exports = class extends Command {
      }
 
      async run(message) {
-          const data = await fetch(`https://imgur.com/r/${subreddits[Math.floor(Math.random() * subreddits.length)]}/hot.json`)
-               .then(response => response.json())
-               .then(body => body.data);
-
-          const selected = data[Math.floor(Math.random() * data.length)];
-
           console.log("Cat command used.");
 
-          return message.channel.send(new MessageEmbed().setImage(`https://imgur.com/${selected.hash}${selected.ext.replace(/\?.*/, '')}`));
+          return message.channel.send(
+               await sfw.meow()
+               .then(img => new MessageEmbed().setImage(img.url))
+          );
      }
 }
