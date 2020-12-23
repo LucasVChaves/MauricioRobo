@@ -53,6 +53,8 @@ module.exports = class Util {
 			.replace(/Guild/g, 'Server').replace(/Use Vad/g, 'Use Voice Activity Detection');
 	}
 
+	//Achou o Easter Egg gigatonico!!
+
 	formatArray(array, type = 'conjunction'){
 		return new Intl.ListFormat('en_GB', {style: 'Short', type: type}).format(array);
 	}
