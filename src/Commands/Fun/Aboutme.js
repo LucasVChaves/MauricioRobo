@@ -26,6 +26,7 @@ module.exports = class extends Command {
                     `**>Quero um comando custom: ** Só ganha se der 5 reais (**OU MAIS**) para o dev.`,
                     `**>Evento HACKER-GAMER: ** Quem achar um easter egg no meu sourcecode ganha 10 reais.`
                ])
+               .setFooter("Não é garantido que você vai ganhar o prêmio! *(dev é pobre)*");
 
           message.channel.send(embed);    
      }
