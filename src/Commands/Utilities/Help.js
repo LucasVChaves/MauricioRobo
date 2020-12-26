@@ -45,7 +45,7 @@ module.exports = class extends Command {
                ]);
                let categories;
                if(!this.client.owners.includes(message.author.id)){
-                    categories = this.client.util.removeDuplicates(this.client.commands.filter(cmd => cmd.category !== 'Owner').map(cmd => cmd.category));
+                    categories = this.client.utils.removeDuplicates(this.client.commands.filter(cmd => cmd.category !== 'Owner').map(cmd => cmd.category));
                }else{
                     categories = this.client.utils.removeDuplicates(this.client.commands.map(cmd => cmd.category))
                }

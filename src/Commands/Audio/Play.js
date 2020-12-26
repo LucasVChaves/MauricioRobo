@@ -8,7 +8,7 @@ module.exports = class extends Command {
         super(...args, {
             aliases: ['p', 'tocar'],
             description: 'O bot entra no canal de voz e toca música/vídeo.',
-            category: "Audio",
+            category: "<WIP>",
             usage: "<link>"
         });
     }
@@ -29,7 +29,7 @@ module.exports = class extends Command {
             return message.channel.send("Deu um erro tentando entrar na chamada. Reclama com o lixo do meu dev!");
         }
 
-        const dispatcher = connection.play(ytdl((args[1])))
+        const dispatcher = connection.play(ytdl((args[0])))
             .on("finish", () => {
                 voiceChannel.leave();
                 message.channel.send("Acabou, to vazando.");
@@ -38,6 +38,7 @@ module.exports = class extends Command {
                 console.log(err);
             });
         
-        dispatcher.setVolumeLogarithmic(5 / 5);
+        dispatcher.setVolume(2);
+        
     }
 }

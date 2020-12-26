@@ -8,7 +8,7 @@ module.exports = class extends Command {
           super(...args, {
                aliases: ['asciificar'],
                description: 'Transforma uma imagem em uma asciiart ("braille").',
-               category: 'Fun',
+               category: '<WIP>',
                usage: '<imagem>'
           });
      }

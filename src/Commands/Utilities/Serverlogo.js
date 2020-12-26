@@ -7,7 +7,7 @@ module.exports = class extends Command {
         super(...args, {
             aliases: ['slogo'],
             description: 'Pega a logo do servidor.',
-            category: "Audio"        
+            category: "Utilidades"        
         });
     }
 

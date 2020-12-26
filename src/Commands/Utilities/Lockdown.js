@@ -11,7 +11,7 @@ module.exports = class extends Command {
           super(...args, {
                aliases: ["ld"],
                description: "Coloca o servidor em lockdown, trancando todos os canais de voz e texto. (CUIDADO!!)",
-               category: 'Utilidades',
+               category: '<WIP>',
                usage: "<ROLE_ID> TRUE || FALSE || NULL",
                args: true,
                ownerOnly: false

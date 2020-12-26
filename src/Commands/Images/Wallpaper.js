@@ -7,7 +7,7 @@ module.exports = class extends Command {
     constructor(...args){
         super(...args, {
             aliases: ['background', 'wllpr'],
-            description: 'Manda um wallpaper delicia pro seu pc.',
+            description: 'Manda um wallpaper delicia pro seu pc. (Alguns wallpapers vem NSFW, não posso fazer muito quanto a isso.)',
             category: "Images"
         });
     }
