@@ -18,11 +18,11 @@ module.exports = class extends Event {
 		const activities = [
 			`${this.client.guilds.cache.size} servidores.`,
 			`${this.client.channels.cache.size} canais.`,
-			`${this.client.guilds.cache.reduce((a, b) => a + b.memberCount, 0)} usuários`
+			`${this.client.guilds.cache.reduce((a, b) => a + b.memberCount, 0)} usuários`,
+			`Comendo o cu de quem ta lendo...`
 		];
 
 		let i = 0;
-		setInterval(() => this.client.user.setActivity(`${this.client.prefix}help | ${activities[i++ % activities.length]}`, {type: 'WATCHING'}), 15000);
-
+		setInterval(() => this.client.user.setActivity(`${this.client.prefix}help | ${activities[i++ % activities.length]}`, {type: 'STREAMING'}), 15000);
 	}
 };
