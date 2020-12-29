@@ -5,7 +5,7 @@ module.exports = class extends Command {
 
      constructor(...args) {
           super(...args, {
-               aliases: ['ajuda'],
+               aliases: ['ajuda', 'commands', 'comandos', 'h'],
                description: 'Te ajuda explicando um comando citado. Se você ta vendo isso já sabe porque funciona né idiota!',
                category: 'Utilidades',
                usage: '[command]'
@@ -40,8 +40,7 @@ module.exports = class extends Command {
                embed.setDescription([               
                     `O prefíxo é: ${this.client.prefix}`,
                     `Parâmetros: \`<>\` é obrigatório, \`[]\` é opcional.`,
-                    `Esses comandos são disponíveis no ${message.guild.name}`,
-                    `*Nota: Alguns comandos Image ou NSFW podem não funcionar devido à API do reddit (de onde as imagens são tiradas), não posso fazer nada a respeito disso.*`
+                    `No ${message.guild.name} você pode usar esses comandos:`,
                ]);
                let categories;
                if(!this.client.owners.includes(message.author.id)){
