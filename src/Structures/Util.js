@@ -56,7 +56,7 @@ module.exports = class Util {
 	//Achou o Easter Egg gigatonico!!
 
 	formatArray(array, type = 'conjunction'){
-		return new Intl.ListFormat('en_GB', {style: 'Short', type: type}).format(array);
+		return new Intl.ListFormat('pt_BR', {style: 'Short', type: type}).format(array);
 	}
 
 	checkOwner(target){

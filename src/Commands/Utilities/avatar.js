@@ -8,18 +8,17 @@ module.exports = class extends Command {
                aliases:['aang'],
                description: 'Manda seu avatar, ou de um membro marcado.',
                category: 'Utilidades',
-               Usage: '[@user]'
+               usage: '[@user]'
           });
 	}
 
 	async run(message, [target]) {
+          console.log("Avatar command used.");
           const member = message.mentions.members.last() || message.guild.members.cache.get(target) || message.member;
 
           const embed = new MessageEmbed()
                .setColor('CYAN')
                .setImage(member.user.displayAvatarURL({dynamic: true, size: 512}));
-          
-          console.log("Avatar command used.");
 
           message.channel.send(embed);
 	}
