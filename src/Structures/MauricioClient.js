@@ -3,8 +3,8 @@ const Util = require('./Util.js');
 
 module.exports = class MauricioClient extends Client {
 
-    constructor(options = {}) {
-        super({
+     constructor(options = {}) {
+         super({
             disableMentions: 'everyone'
         });
         this.validate(options);
