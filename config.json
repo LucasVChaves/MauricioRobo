@@ -2,5 +2,5 @@
      "prefix": ">",
      "token": "<token/>",
      "owners": ["249344016011886594"],
-     "defaultPerms": ["SEND_MESSAGES", "VIEW_CHANNEL", "SPEAK"]
+     "defaultPerms": ["VIEW_CHANNEL", "SEND_MESSAGES", "EMBED_LINKS", "ATTACH_FILES"]
 }

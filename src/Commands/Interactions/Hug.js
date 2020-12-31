@@ -14,10 +14,10 @@ module.exports = class extends Command {
         });
     }
 
-    async run(message,) {
+    async run(message, [target]) {
         console.log("Hug command used.");
 
-        const member = message.mentions.members.last();
+        const member = message.mentions.members.last() || message.guild.members.cache.get(target) || message.member;
 
         if(member.id === message.author.id) return message.channel.send(`Nossa ${message.author.username}, se abraçando? Que triste kkkkkkkk.`);
 
