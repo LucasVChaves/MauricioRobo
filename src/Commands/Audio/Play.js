@@ -29,7 +29,13 @@ module.exports = class extends Command {
             return message.channel.send("Deu um erro tentando entrar na chamada. Reclama com o lixo do meu dev!");
         }
 
-        const dispatcher = connection.play(ytdl((args[0])))
+        const queue = [args[0]];
+
+        const dispatcher = connection.play(ytdl((queue[0])))
+            .on("end", () => {
+                queue.shift();
+                message.channel.send(`Tocando: ${queue[0]}`)
+            })
             .on("finish", () => {
                 voiceChannel.leave();
                 message.channel.send("Acabou, to vazando.");
@@ -38,7 +44,7 @@ module.exports = class extends Command {
                 console.log(err);
             });
         
-        dispatcher.setVolume(2);
+        dispatcher.setVolume(1);
         
     }
 }
