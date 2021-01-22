@@ -14,17 +14,13 @@
     "@extreme_hero/deeptype": "^1.0.1",
     "diff": "^4.0.2",
     "discord.js": "^12.3.1",
-    "ffmpeg-static": "^4.2.7",
     "figlet": "^1.5.0",
     "glob": "^7.1.6",
     "moment": "^2.29.0",
     "ms": "^2.1.2",
     "nekos.life": "^2.0.7",
     "node-fetch": "^2.6.1",
-    "opusscript": "^0.0.7",
     "path": "^0.12.7",
-    "util": "^0.12.3",
-    "yt-search": "^2.5.2",
-    "ytdl-core": "^4.4.3"
+    "util": "^0.12.3"
   }
 }

@@ -8,7 +8,6 @@ module.exports = class Util {
 	constructor(client) {
 		this.client = client;
 	}
-
 	
 	get directory() {
 		return `${path.dirname(require.main.filename)}${path.sep}`;
