@@ -36,7 +36,7 @@ module.exports = class extends Command {
                `foi cancelado(a) porque riu de basquete de anão na frente dos atletas. ⛹️‍♂️`,
                `foi cancelada(o) porque é linda(o) de mais pra esse servidor! 💅`,
                `foi cancelado(a) porque não pagou o agiota. 🕵️‍♂️`,
-               `foi cancelada(o) por ser anti-legalize. 🍁🚬`
+               `foi cancelada(o) por ser anti-legalize. 🍁🚬`,
                `foi cancelado(a) por não gostar de RGB nas coisas! 🏳️‍🌈`
           ];
           const answerNum = Math.floor(Math.random() * answersList.length);
