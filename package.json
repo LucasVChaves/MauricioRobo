@@ -3,12 +3,16 @@
   "version": "1.1.0",
   "description": "Bot oficial do AgiotaCraft",
   "main": "src/main.js",
+  "scripts": {
+    "start": "nodemon src/main.js"
+  },
   "repository": "https://github.com/LucasVChaves/MauricioRobo.git",
   "author": "Lucas <lucasvchaves@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "eslint": "^7.10.0",
-    "eslint-config-tesseract": "^0.0.3"
+    "eslint-config-tesseract": "^0.0.3",
+    "nodemon": "^2.0.7"
   },
   "dependencies": {
     "@extreme_hero/deeptype": "^1.0.1",

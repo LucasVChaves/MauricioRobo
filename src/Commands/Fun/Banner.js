@@ -15,6 +15,6 @@ module.exports = class extends Command {
 
           console.log("Banner command used.");
 
-          return msg.channel.send(await figlet(banner), { code: true });
+          return msg.channel.send(await figlet(banner,{horizontalLayout: "default", verticalLayout: "default", width: 115, whitespaceBreak: true}), { code: true });
      }
 };

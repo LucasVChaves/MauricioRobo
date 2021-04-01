@@ -1,6 +1,6 @@
 {
      "prefix": ">",
-     "token": "<token/>",
+     "token": "NzYwOTQ0Mjk5NjgzNzQxNjk2.X3Tamg.y1z4pSqw6y2oHb3LmWuot8u3vFs",
      "owners": ["249344016011886594"],
-     "defaultPerms": ["VIEW_CHANNEL", "SEND_MESSAGES", "EMBED_LINKS", "ATTACH_FILES"]
+     "defaultPerms": ["SEND_MESSAGES", "VIEW_CHANNEL", "ATTACH_FILES", "CONNECT"]
 }

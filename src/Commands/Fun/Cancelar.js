@@ -28,7 +28,16 @@ module.exports = class extends Command {
                `foi cancelado(a) por torcer pro Tupi. 🐓`,
                `foi cancelada(o) porque a unha do dedão do pé esquerdo tem uma cor esquisita. 🦶`,
                `foi cancelado(a) porque tem trés mamilos. 🎯`,
-               'foi cancelada(o) por ouvir Matuê. 👹'
+               `foi cancelada(o) por ouvir Matuê. 👹`,
+               `foi cancelado(a) por ser flagrado fazendo asfixía auto-erótica no banheiro da rodoviária de JF! 🚌`,
+               `foi cancelada(o) porque só enxe o saco o dia todo! 😡`,
+               `foi cancelado(a) porque desrespeitou The Midnight Gospel. 🎤`,
+               `foi cancelada(o) por falar que comida japonesa é ruim. 🍣`,
+               `foi cancelado(a) porque riu de basquete de anão na frente dos atletas. ⛹️‍♂️`,
+               `foi cancelada(o) porque é linda(o) de mais pra esse servidor! 💅`,
+               `foi cancelado(a) porque não pagou o agiota. 🕵️‍♂️`,
+               `foi cancelada(o) por ser anti-legalize. 🍁🚬`
+               `foi cancelado(a) por não gostar de RGB nas coisas! 🏳️‍🌈`
           ];
           const answerNum = Math.floor(Math.random() * answersList.length);
           const member = message.mentions.members.last() || message.guild.members.cache.get(target);

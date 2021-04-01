@@ -17,7 +17,7 @@ module.exports = class extends Command {
           super(...args, {
                aliases: ['cursedpic'],
                description: 'Manda uma foto aleatória que causa enorme desconforto. Podem ser engraçadas também.',
-               category: "NSFW",
+               category: "Images",
                nsfw: false         
           });
      }
